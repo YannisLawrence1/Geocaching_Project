@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{991A3BC4-1892-4512-B98E-5CC240E0E5D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Geocaching_project.My.MyApplication</StartupObject>
+    <RootNamespace>Geocaching_project</RootNamespace>
+    <AssemblyName>Geocaching project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Geocaching project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Geocaching project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EO.Base, Version=19.2.91.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.19.2.91\lib\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser, Version=19.2.91.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.19.2.91\lib\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser.WinForm, Version=19.2.91.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.WinForm.19.2.91\lib\EO.WebBrowser.WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine, Version=19.2.91.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EO.WebBrowser.19.2.91\lib\EO.WebEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNew.Designer.vb">
+      <DependentUpon>AddNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToList.Designer.vb">
+      <DependentUpon>AddToList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddToList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateANewAccount.Designer.vb">
+      <DependentUpon>CreateANewAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateANewAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseAccess.vb" />
+    <Compile Include="Edit.Designer.vb">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit2.Designer.vb">
+      <DependentUpon>Edit2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email1.Designer.vb">
+      <DependentUpon>Email1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email2.Designer.vb">
+      <DependentUpon>Email2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Email2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword2.Designer.vb">
+      <DependentUpon>ForgotPassword2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword3.Designer.vb">
+      <DependentUpon>ForgotPassword3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPasword1.Designer.vb">
+      <DependentUpon>ForgotPasword1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasword1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geocaching_DatabaseDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Geocaching_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListCreate.Designer.vb">
+      <DependentUpon>ListCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListCreate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists.Designer.vb">
+      <DependentUpon>Lists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists2.Designer.vb">
+      <DependentUpon>Lists2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lists2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geocaching_DatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Geocaching_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SelectAccessLevel.Designer.vb">
+      <DependentUpon>SelectAccessLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectAccessLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSecurityQuestionvb.Designer.vb">
+      <DependentUpon>SelectSecurityQuestionvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSecurityQuestionvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUser.Designer.vb">
+      <DependentUpon>SelectUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCaches.Designer.vb">
+      <DependentUpon>ViewCaches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCaches.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeMenu.Designer.vb">
+      <DependentUpon>WelcomeMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddNew.resx">
+      <DependentUpon>AddNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddToList.resx">
+      <DependentUpon>AddToList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateANewAccount.resx">
+      <DependentUpon>CreateANewAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit.resx">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit2.resx">
+      <DependentUpon>Edit2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email1.resx">
+      <DependentUpon>Email1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email2.resx">
+      <DependentUpon>Email2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword2.resx">
+      <DependentUpon>ForgotPassword2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword3.resx">
+      <DependentUpon>ForgotPassword3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasword1.resx">
+      <DependentUpon>ForgotPasword1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCreate.resx">
+      <DependentUpon>ListCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists.resx">
+      <DependentUpon>Lists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists2.resx">
+      <DependentUpon>Lists2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectAccessLevel.resx">
+      <DependentUpon>SelectAccessLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSecurityQuestionvb.resx">
+      <DependentUpon>SelectSecurityQuestionvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUser.resx">
+      <DependentUpon>SelectUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCaches.resx">
+      <DependentUpon>ViewCaches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeMenu.resx">
+      <DependentUpon>WelcomeMenu.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Geocaching_DatabaseDataSet.xsc">
+      <DependentUpon>Geocaching_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Geocaching_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Geocaching_DatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Geocaching_DatabaseDataSet.xss">
+      <DependentUpon>Geocaching_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Geocaching_DatabaseDataSet1.xsc">
+      <DependentUpon>Geocaching_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Geocaching_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Geocaching_DatabaseDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Geocaching_DatabaseDataSet1.xss">
+      <DependentUpon>Geocaching_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\green.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Geocaching_Database.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\how-to-edit-a-png-file-4.png" />
+    <None Include="Resources\imageedit_3_5670086148.png" />
+    <None Include="Resources\runMap.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
